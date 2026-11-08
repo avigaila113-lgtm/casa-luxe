@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA LUXE - עיצוב הבית</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/jpeg" href="assets/files/images/Icon.jpg" >
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">CASA LUXE</a>
+        </div>
+      <button class="hamburger" id="hamburger-btn" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">דף הבית</a></li>
+                <li><a href="pages/about.html">אודות</a></li>
+                <li><a href="pages/accessories.html">אקססוריז</a></li>
+                <li><a href="pages/textile-lighting.html">טקסטיל ותאורה</a></li>
+                <li><a href="pages/order.html">הזמנה</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <section class="hero-banner">
+    <div class="hero-image-container">
+        <img src="assets/files/images/livingroom.png" alt="CASA LUXE עיצוב הבית" class="hero-img" usemap="#home-map">  
+        <map name="home-map">
+            <area shape="rect" coords="200,0,700,180" href="pages/textile-lighting.html" alt="טקסטיל ותאורה">
+            <area shape="rect" coords="100,180,800,400" href="pages/accessories.html" alt="אקססוריז ונוי">
+        </map>
+    </div>
+    <div class="hero-content">
+        <h1>הבית שלך. הסגנון שלך.</h1>
+        <p>חנות בוטיק לפריטי עיצוב, טקסטיל ותאורה שמשדרגים את הבית ומכניסים חמימות לכל חלל.</p>
+    </div>
+</section>
+
+        <section class="featured-categories">
+            <h2>הקולקציות שלנו</h2>
+            <div class="categories-grid">
+                <article class="category-card">
+                    <h3>אקססוריז ונוי</h3>
+                    <p>אגרטלים, שידות נוי ,נרות,מגשי עץ, כרסאות ועוד...</p>
+                    <a href="pages/accessories.html" class="link-btn">לצפייה בקולקציה &larr;</a>
+                </article>
+                <article class="category-card">
+                    <h3>טקסטיל ותאורה</h3>
+                    <p>וילונות פשתן, גופי תאורה תלויים וכריות נוי.</p>
+                    <a href="pages/textile-lighting.html" class="link-btn">לצפייה בקולקציה &larr;</a>
+                </article>
+            </div>
+        </section>
+    </main>
+<footer>
+        <p>כל הזכויות שמורות ל-CASA LUXE &copy; 2026</p>
+        <p><a href="pages/about.html">למעבר לדף אודות</a></p>
+        <p>
+            <a href="assets/files/catelog.pdf" download target="_blank" class="catalog-link">📄 הורדת קטלוג המוצרים המלא (PDF)</a>
+        </p>
+    </footer>
+<script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

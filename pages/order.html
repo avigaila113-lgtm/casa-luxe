@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA LUXE - טופס הזמנה</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="image/jpeg" href="../assets/files/images/Icon.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html">CASA LUXE</a>
+        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="accessories.html">אקססוריז</a></li>
+                <li><a href="textile-lighting.html">טקסטיל ותאורה</a></li>
+                <li><a href="order.html">הזמנה</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h1>טופס הזמנה ורישום</h1>
+            <p>מלאו את הפרטים ונציג מטעם CASA LUXE יצור עמכם קשר להשלמת ההזמנה</p>
+        </section>
+
+        <section class="form-section">
+            <article class="form-article">
+            <form action="success.html" method="GET">
+                <fieldset>
+                    <legend>פרטים אישיים</legend>
+                    
+                    <label for="fullname">שם מלא:</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="הכניסו שם מלא" pattern="[א-תA-Za-z\s]{2,}" title="יש להזין אותיות בלבד (לפחות 2 תווים)">
+
+                    <label for="email">כתובת דוא"ל:</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com" title="יש להזין כתובת אימייל תקינה באנגלית הכוללת @">
+
+                    <label for="phone">מספר טלפון:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="0500000000" pattern="0[0-9]{8,9}" title="יש להזין מספר טלפון תקין בן 9-10 ספרות המתחיל ב-0">
+                </fieldset>
+
+                <fieldset>
+                    <legend>פרטי ההזמנה</legend>
+
+                    <label for="category">בחר קטגוריה:</label>
+                    <select id="category" name="category" required onchange="filterProducts()">
+                        <option value="">-- בחרו קטגוריה --</option>
+                        <option value="accessories">אקססוריז ואביזרי נוי</option>
+                        <option value="textile">טקסטיל ותאורה</option>
+                    </select>
+
+                    <label for="item">בחר מוצר:</label>
+                    <select id="item" name="item" required>
+                        <option value="">-- תחילה בחר קטגוריה --</option>
+                    </select>
+
+                    <label for="quantity">כמות:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" required title="הכמות חייבת להיות בין 1 ל-20">
+
+                    <label for="address">כתובת מלאה למשלוח:</label>
+                    <input type="text" id="address" name="address" required placeholder="עיר, רחוב, מספר בית">
+
+                    <label for="notes">הערות מיוחדות:</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="הוסיפו בקשות מיוחדות או הערות למשלוח..."></textarea>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn">שליחת הזמנה</button>
+                    <button type="reset" class="btn-reset">איפוס טופס</button>
+                </div>
+            </form>
+            </article>
+        </section>
+    </main>
+
+   <footer>
+        <p>כל הזכויות שמורות ל-CASA LUXE &copy; 2026</p>
+        <p><a href="about.html">למעבר לדף אודות</a></p>
+        <p>
+            <a href="../assets/files/catelog.pdf" download target="_blank" class="catalog-link">📄 הורדת קטלוג המוצרים המלא (PDF)</a>
+        </p>
+    </footer>
+
+    <script>
+        function filterProducts() {
+            const categorySelect = document.getElementById('category');
+            const itemSelect = document.getElementById('item');
+            const selectedCategory = categorySelect.value;
+
+            itemSelect.innerHTML = '<option value="">-- בחר מוצר --</option>';
+
+            if (selectedCategory === 'textile') {
+                const products = [
+                    'כרית נוי מבד פשתן',
+                    'שמיכה מפנקת',
+                    'מנורת שולחן מברזל מוזהב',
+                    'גופי תאורה תלויים בעיצוב כדורי יוקרתי',
+
+                    'מראה דקורטיבית בעיצוב נורדי- מינמליסטי',
+                    'וילון פשתן אוורירי בעיצוב כפרי- יוקרתי'
+                ];
+                products.forEach(product => {
+                    const opt = document.createElement('option');
+                    opt.value = product;
+                    opt.textContent = product;
+                    itemSelect.appendChild(opt);
+                });
+            } else if (selectedCategory === 'accessories') {
+                const products = [
+                    'אגרטל קרמיקה פיסולי',
+                   'כורסת יחידה מעוצבת בסגנון קלאסי- חמים',
+                    'נרות נוי באווירה חמימה',
+                    'מגשי עץ קצוות עגולים',
+                    'ספריית קיר פיסולית בעיצוב אסימטרי',
+                    'שידת מדפים מעץ טבעי'
+                ];
+                products.forEach(product => {
+                    const opt = document.createElement('option');
+                    opt.value = product;
+                    opt.textContent = product;
+                    itemSelect.appendChild(opt);
+                });
+            }
+        }
+    </script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

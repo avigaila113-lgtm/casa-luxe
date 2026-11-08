@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA LUXE - אישור הזמנה</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="image/jpeg" href="../assets/files/images/Icon.jpg">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html">CASA LUXE</a>
+        </div>
+         <button class="hamburger" id="hamburger-btn" aria-label="תפריט ניווט">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="accessories.html">אקססוריז</a></li>
+                <li><a href="textile-lighting.html">טקסטיל ותאורה</a></li>
+                <li><a href="order.html">הזמנה</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="success-section">
+            <article class="success-box">
+                <h1>ההזמנה נקלטה בהצלחה!</h1>
+                <p>תודה שבחרתם <strong>CASA LUXE</strong>.</p>
+                <p>הפרטים שלך נקלטו במערכת בהצלחה, ונציג מטעמנו יצור עמך קשר בהקדם להשלמת המשלוח.</p>
+                <a href="../index.html" class="btn">חזרה לדף הבית</a>
+            </article>
+        </section>
+    </main>
+
+   <footer>
+        <p>כל הזכויות שמורות ל-CASA LUXE &copy; 2026</p>
+        <p><a href="about.html">למעבר לדף אודות</a></p>
+        <p>
+            <a href="../assets/files/catelog.pdf" download target="_blank" class="catalog-link">📄 הורדת קטלוג המוצרים המלא (PDF)</a>
+        </p>
+    </footer>
+ <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
