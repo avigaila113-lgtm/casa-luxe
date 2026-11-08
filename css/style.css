@@ -3,7 +3,8 @@
     --dark-bg: #2b2927;
     --light-bg: #faf9f6;
     --accent-gold: #d4b572;
-    --text-muted: #6e6861
+    --text-muted: #6e6861;
+    --shadow-light:#ffffff;
 }
 
 * {
@@ -35,7 +36,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--dark-bg); 
-    color: #ffffff;
+    color:var(--shadow-light);
     padding: 22px 6%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -55,7 +56,7 @@ nav ul {
 }
 
 nav a {
-    color: #ffffff;
+    color:var(--shadow-light);
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -71,7 +72,7 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: var(--dark-bg);
-    color: #ffffff;
+    color: var(--shadow-light);
     padding: 30px;
     margin-top: auto;
     gap: 10px;
@@ -83,12 +84,12 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffffff;
+    color:var(--shadow-light);
 }
 footer .catalog-link {
     display: inline-block;
     background-color: var(--primary-color);
-    color: #ffffff;
+    color:var(--shadow-light);
     padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
@@ -99,14 +100,14 @@ footer .catalog-link {
 
 footer .catalog-link:hover {
     background-color: #a08143;
-    color: #ffffff;
+    color:var(--shadow-light);
     transform: translateY(-2px);
 }
 
 .btn {
     display: inline-block;
     background-color: var(--primary-color); 
-    color: #ffffff;
+    color:var(--shadow-light);
     padding: 11px 24px;
     text-decoration: none;
     border-radius: 3px;
@@ -124,7 +125,7 @@ footer .catalog-link:hover {
 
 .btn-secondary {
     background-color: var(--dark-bg);
-    color: #ffffff;
+    color:var(--shadow-light);
 }
 
 .btn-secondary:hover {
@@ -133,7 +134,7 @@ footer .catalog-link:hover {
 
 .btn-reset {
     background-color: #9e9890;
-    color: #ffffff;
+    color: var(--shadow-light);
     padding: 11px 20px;
     border-radius: 3px;
     border: none;
@@ -147,7 +148,7 @@ footer .catalog-link:hover {
 }
 
 .hero-banner, .page-title, .banner-section {
-    background-color: #ffffff;
+    background-color:var(--shadow-light);
     padding: 45px 20px;
     text-align: center;
     border-radius: 4px;
@@ -206,7 +207,7 @@ footer .catalog-link:hover {
 .featured-categories {
     padding: 40px 20px;
     text-align: center;
-    background-color: #ffffff;
+    background-color:var(--shadow-light);
     border-radius: 4px;
     margin-bottom: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -277,7 +278,7 @@ footer .catalog-link:hover {
     text-decoration: none;
     color: var(--dark-bg);
     padding: 7px 16px;
-    background-color: #ffffff;
+    background-color:var(--shadow-light);
     border: 1px solid #dcd5cc;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -286,7 +287,7 @@ footer .catalog-link:hover {
 
 .filter-list a:hover {
     background-color: var(--dark-bg);
-    color: #ffffff;
+    color:var(--shadow-light);
     border-color: var(--dark-bg);
 }
 
@@ -297,7 +298,7 @@ footer .catalog-link:hover {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color:var(--shadow-light);
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -341,7 +342,7 @@ footer .catalog-link:hover {
 }
 
 .form-section {
-    background-color: #ffffff;
+    background-color:var(--shadow-light);
     padding: 35px;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -399,7 +400,7 @@ textarea {
 }
 
 .success-box {
-    background-color: #ffffff;
+    background-color:var(--shadow-light);
     padding: 45px;
     text-align: center;
     border-radius: 4px;
